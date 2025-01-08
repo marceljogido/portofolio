@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portofolio Marcel Jogido Christoper, seorang developer web dan UI/UX yang memiliki keahlian di bidang IoT dan networking.">
+    <meta name="keywords" content="web developer, UI/UX, IoT, networking, portofolio, Marcel Jogido">
+    <title>Portofolio Marcel</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS for animations -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Import the component -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <!-- Custom CSS for dark theme and lighting -->
+    <style>
+        body { background: linear-gradient(to bottom, #e3f2fd, #bbdefb); color: #222; }
+        .navbar {
+            background-color: #1565c0;
+            padding: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navbar .nav-link {
+            color: #ffffff;
+            font-weight: 500;
+        }
+        .navbar .nav-link:hover {
+            color: #ffeb3b;
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffeb3b;
+        }
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        .banner-content {
+            text-align: left;
+            padding-top: 100px;
+            padding-left: 50px;
+        }
+        .banner-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #ffeb3b;
+        }
+        .banner-subtitle {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            color: #ffffff;
+        }
+        .social-icons a {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-right: 15px;
+        }
+        .social-icons a:hover {
+            color: #ffeb3b;
+        }
+        .btn-primary {
+            background-color: #ffeb3b;
+            border-color: #ffeb3b;
+            font-weight: bold;
+            color: #1565c0;
+        }
+        .btn-primary:hover {
+            background-color: #ffd54f;
+            border-color: #ffd54f;
+        }
+        .skills-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .skill-icon {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+        }
+        .skill-icon img {
+            width: 40px;
+            height: 40px;
+        }
+        .project-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .highlight {
+            color: #ffeb3b;
+        }
+        .form-control:focus {
+            border-color: #ffeb3b;
+            box-shadow: 0 0 0 0.2rem rgba(255, 235, 59, 0.25);
+        }
+        .light-effect {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .light-effect:hover {
+            transform: scale(1.05);
+        }
+        section#about {
+            background: linear-gradient(to right, #bbdefb, #e3f2fd);
+        }
+        section#contact {
+            background-color: #1565c0;
+            color: #ffffff;
+        }
+        footer {
+            background-color: #0d47a1;
+            color: #ffffff;
+        }
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        .highlight {
+            color: yellow; /* More accessible highlight color */
+        }
+    </style>
+</head>
+<body>
+<div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Marcel <span style="color: #ffeb3b;">Portfolio</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#banner">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Tentang Saya</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Layanan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Proyek</a></li>
+          <li class="nav-item"><a class="nav-link" href="#team">Tim</a></li>
+          <li class="nav-item"><a class="nav-link" href="#clients">Klien</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <section id="banner" class="d-flex align-items-center" style="height: 100vh; background: linear-gradient(to bottom right, #1565c0, #0d47a1);">
+    <div class="container banner-content d-flex align-items-center" style="overflow-x: hidden;">
+      <div class="w-50" style="overflow: hidden;">
+        <h1 class="banner-title">Personal Portfolio by Marcel</h1>
+        <p class="banner-subtitle">Saya suka apa yang saya lakukan. Dari desain hingga coding, saya berusaha memberikan yang terbaik dalam setiap proyek. Jangan lupa untuk mengikuti media sosial dan Github saya untuk melihat proyek saya dalam dunia pengembangan web.</p>
+        <div class="social-icons mt-4">
+          <a href="https://www.facebook.com/marcel.marbun.077/" class="fab fa-facebook" aria-label="Facebook"></a>
+          <a href="https://www.instagram.com/marcel_marbun/" class="fab fa-instagram" aria-label="Instagram"></a>
+          <a href="https://github.com/marceljogido" class="fab fa-github" aria-label="Github"></a>
+        </div>
+        <a href="#about" class="btn btn-primary mt-4" onclick="window.scrollTo({top: document.querySelector('#about').offsetTop, behavior: 'smooth'}); return false;">Lihat Selengkapnya </a>
+      </div>
+      <div class="w-50">
+        <!-- Use it like any other HTML element -->
+        <model-viewer src="disco_ball.glb" alt="Disco Ball" auto-rotate auto-rotate-delay="0" shadow-intensity="1" camera-controls touch-action="pan-y" style="width: 400px; height: 500px; margin-left: 8rem;"></model-viewer>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5">
+      <div class="container">
+          <h2 class="text-center highlight" data-aos="fade-up">Tentang Saya</h2>
+          <div class="row mt-4 align-items-center">
+              <div class="col-md-6" data-aos="fade-right">
+                  <img src="profil.png" alt="Foto Marcel Jogido" class="img-fluid rounded-circle" style="width: 450px; height: 450px;">
+              </div>
+              <div class="col-md-6" data-aos="fade-left">
+                  <h3>Halo, Saya Marcel</h3>
+                  <p data-aos="fade-up" data-aos-delay="200">
+                    Saya adalah seorang developer web dan UI/UX yang juga memiliki keahlian di bidang IoT. 
+                    Saya sangat antusias dalam mengerjakan proyek yang menggabungkan teknologi dan kreativitas.
+                    Saya berkomitmen untuk terus belajar dan berkembang dalam dunia yang selalu berubah ini.
+                  </p>
+                  <h4>Keahlian Saya</h4>
+                  <div class="skills-icons">
+                      <div class="skill-icon" aria-label="Figma">
+                          <img src="figma.png" alt="Figma">
+                      </div>
+                      <div class="skill-icon" aria-label="Bootstrap">
+                          <img src="boot.png" alt="Bootstrap">
+                      </div>
+                      <div class="skill-icon" aria-label="JavaScript">
+                          <img src="java.png" alt="JavaScript">
+                      </div>
+                      <div class="skill-icon" aria-label="MySQL">
+                          <img src="mysql.png" alt="MySQL">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-5 text-center">
+    <div class="container">
+      <h2 class="highlight" data-aos="fade-up">Layanan Saya</h2>
+      <p data-aos="fade-up" data-aos-delay="200">Skill yang saya tawarkan dalam pengembangan teknologi</p>
+      <div class="row mt-4">
+        <div class="col-md-4" data-aos="zoom-in">
+          <div class="light-effect p-4 rounded">
+            <div class="mb-3">
+              <i class="fas fa-code fa-3x text-warning"></i>
+            </div>
+            <h4>Programming</h4>
+            <p>Pembuatan website, aplikasi, dan software berkualitas tinggi dengan teknologi terkini.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="light-effect p-4 rounded">
+            <div class="mb-3">
+              <i class="fas fa-cogs fa-3x text-warning"></i>
+            </div>
+            <h4>IoT</h4>
+            <p>Desain dan pembuatan sistem IoT yang efisien dan inovatif.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="light-effect p-4 rounded">
+            <div class="mb-3">
+              <i class="fas fa-network-wired fa-3x text-warning"></i>
+            </div>
+            <h4>Networking</h4>
+            <p>Instalasi dan pemeliharaan jaringan untuk memastikan konektivitas yang optimal.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-5">
+    <div class="container">
+      <h2 class="highlight text-center" data-aos="fade-up">Proyek Saya</h2>
+      <p class="text-center" data-aos="fade-up" data-aos-delay="200">Beberapa proyek terbaru saya</p>
+      <div class="row mt-4">
+        <div class="col-md-4" data-aos="zoom-in">
+          <div class="light-effect p-3 rounded">
+            <img src="prokon.jpg" alt="Proyek 1 - Alat Absensi RFID" class="img-fluid rounded project-image">
+            <h4 class="mt-2">Prokon</h4>
+            <p>Membuat Alat Absensi RFID.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="light-effect p-3 rounded">
+            <img src="project2.jpg" alt="Proyek 2 - Website Restoran" class="img-fluid rounded project-image">
+            <h4 class="mt-2">RPL</h4>
+            <p>Membuat website restoran.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="light-effect p-3 rounded">
+            <img src="re.jpg" alt="Proyek 3 - Radio FM" class="img-fluid rounded project-image">
+            <h4 class="mt-2">Rangkaian Elektronika</h4>
+            <p>Membuat Radio FM.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="py-5">
+    <div class="container">
+      <h2 class="highlight text-center" data-aos="fade-up">Partner</h2>
+      <p class="text-center" data-aos="fade-up" data-aos-delay="200">Saya bekerja sama dengan partner lainnya.</p>
+      <div class="row mt-4">
+        <div class="col-md-4" data-aos="zoom-in">
+          <div class="team-member text-center p-3">
+            <img src="ray.png" alt="Partner Ray Gavriel" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
+            <h4 class="mt-3">Ray Gavriel</h4>
+            <p>TEKKOM 2022</p>
+            <div>
+              <a href="#" class="social-icon mx-2"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon mx-2"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon mx-2"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="team-member text-center p-3">
+            <img src="umar.png" alt="Partner Umar Tilmisani" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
+            <h4 class="mt-3">Umar Tilmisani</h4>
+            <p>TEKKOM 2022</p>
+            <div>
+              <a href="#" class="social-icon mx-2"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon mx-2"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon mx-2"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="team-member text-center p-3">
+            <img src="ghina.png" alt="Partner Ghina Mawarni" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
+            <h4 class="mt-3">Ghina Mawarni</h4>
+            <p>TEKKOM 2022</p>
+            <div>
+              <a href="#" class="social-icon mx-2"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon mx-2"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon mx-2"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients Section -->
+  <section id="clients" class="py-5">
+    <div class="container">
+      <h2 class="highlight text-center" data-aos="fade-up">Klien Kami</h2>
+      <p class="text-center" data-aos="fade-up" data-aos-delay="200">Beberapa klien yang telah bekerja sama dengan kami.</p>
+      <div class="row mt-4 text-center">
+        <div class="col-md-2" data-aos="zoom-in">
+          <img src="ajaib.png" alt="Klien Ajaib" class="img-fluid">
+        </div>
+        <div class="col-md-2" data-aos="zoom-in" data-aos-delay="100">
+          <img src="pintu.png" alt="Klien Pintu" class="img-fluid">
+        </div>
+        <div class="col-md-2" data-aos="zoom-in" data-aos-delay="200">
+          <img src="tokped.png" alt="Klien Tokopedia" class="img-fluid">
+        </div>
+        <div class="col-md-2" data-aos="zoom-in" data-aos-delay="300">
+          <img src="blibli.png" alt="Klien Blibli" class="img-fluid">
+        </div>
+        <div class="col-md-2" data-aos="zoom-in" data-aos-delay="400">
+          <img src="tiktok.png" alt="Klien TikTok" class="img-fluid">
+        </div>
+        <div class="col-md-2" data-aos="zoom-in" data-aos-delay="500">
+          <img src="meta.png" alt="Klien Meta" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+        <h2 class="highlight text-center" data-aos="fade-up">Kontak Kami</h2>
+        <p class="text-center" data-aos="fade-up" data-aos-delay="200">Hubungi kami untuk informasi lebih lanjut.</p>
+        <form method="post" action="#" data-aos="fade-up" data-aos-delay="200">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="name">Nama</label>
+                    <input type="text" class="form-control" id="name" placeholder="Nama" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message">Pesan</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Pesan" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Kirim</button>
+        </form>
+    </div>
+
+  <!-- Footer Section -->
+  <footer class="py-4 text-center">
+    <div class="container">
+        <p class="m-0">&copy; <span id="currentYear"></span> Marcel Jogido Christoper. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" defer></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+<!-- AOS for animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  // Initialize AOS
+  AOS.init();
+
+  // Dynamic year in footer
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
+
